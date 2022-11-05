@@ -13,7 +13,7 @@
 // See mc.cpp for the implementation of this class
 //
 
-class CmcApp : public CWinApp
+class CmcApp : public CWinAppEx
 {
 public:
 	CmcApp();

@@ -7,7 +7,7 @@ CTwRand::CTwRand(void)
 							0xf18700, 0x9574, 0x7650f11, 0x887203, 0x357a0f}, length=10;
 	
 	for(int i=0; i<length; i++)
-		init[i] ^= rand();
+		init[i] ^= rand() ^ (int)GetTickCount();
 	
 	mti=N+1;
 	init_by_array(init, length);
@@ -84,7 +84,7 @@ unsigned long CTwRand::genrand_int32(void)
         mti = 0;
     }
   
-    y = mt[++mti%N];
+    y = mt[mti++];
 
     /* Tempering */
     y ^= (y >> 11);
