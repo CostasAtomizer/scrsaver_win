@@ -102,7 +102,7 @@ void CMainFrame::Palette_Init()
   byte r = 0, g = 0, b = 0;
   memset(palette, 0, n * 4);
  
-    for(int i = 1; i < n; i++)
+  for(int i = 1; i < n; i++)
   {
     double t = i * (PI * 2) / n;
 
